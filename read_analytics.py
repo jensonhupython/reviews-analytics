@@ -17,3 +17,52 @@ for d in data:
 print('留言的平均長度為:', sum_len/len(data))    
 # Read the first data 
 #print(data[0])
+
+# 篩選資料
+new_data = []
+for new_d in data:
+    if len(new_d) < 100:
+        new_data.append(new_d)
+
+#print('一共有', len(new_data), '筆留言長度小於100')
+#print(new_data[0])
+
+# Filter 'good' in message
+good_data = []
+for good_d in data:
+    if 'good' in good_d:
+        good_data.append(good_d)
+
+print('一共有', len(good_data), '筆留言提到 good')
+print('Check:')
+print(good_data[0])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
