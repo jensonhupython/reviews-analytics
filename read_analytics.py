@@ -37,10 +37,13 @@ print('一共有', len(good_data), '筆留言提到 good')
 print('Check:')
 print(good_data[0])
 
+# 清單快寫法
+good_data = [good_d for good_d in data if 'good' in good_d]
 
-
-
-
+# Test
+bad_data = []
+bad_data = ['bad' in d for bad_d in data]
+print(bad_data)
 
 
 
