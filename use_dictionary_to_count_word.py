@@ -1,6 +1,6 @@
 # 利用 dictionary 做一個功能
 # 功能: 可以計數某個字出現在整個留言中, 可以讓使用者輸入
-
+import time
 data = []
 count = 0
 with open('reviews.txt', 'r') as f:
@@ -13,6 +13,7 @@ with open('reviews.txt', 'r') as f:
 #print('檔案讀取完畢, 總共有', len(data), '筆資料')
 print(data[0])
 
+start_time = time.time()
 word_count = {} 
 for each_msg in data:
     words = each_msg.split(' ')
@@ -26,9 +27,13 @@ for each_msg in data:
 
 for key in word_count:
     #print(key, word_count[key])
-    if word_count[key] > 2:
+    if word_count[key] > 10000000:
         print(key, word_count[key])
 #print(word_count)
+end_time = time.time()
+print('花了', end_time - start_time, 'second')
+print(len(word_count))
+print(word_count['Allen'])
 
 print('歡迎使用查找功能, 離開請輸入 q')
 while True:
